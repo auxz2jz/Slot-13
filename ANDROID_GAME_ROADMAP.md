@@ -12,25 +12,28 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [DONE] Establish project memory
 - [DONE] Establish roadmap
 - [DONE] Establish testing/diagnostic policy
-- [PLANNED] Pin engine/tool versions
-- [PLANNED] Add dependency/license manifest
+- [PARTIAL] Pin tools: trimesh 4.11.1 pinned for character generation; game engine version still unpinned
+- [DONE] Add asset provenance/license manifest
 - [PLANNED] Add Android/Godot project skeleton
 
 ## Phase 1 - 3D characters
 ### 1A. Character design language
-- [IN PROGRESS] Define original visual language: chunky low-poly forms, clear silhouettes, mobile readability
-- [IN PROGRESS] Research reusable public GitHub tools/assets with compatible licenses
-- [PLANNED] Record license/provenance for anything reused
+- [CANDIDATE] Original low-poly visual language: clear silhouettes, vertex colors, mobile readability
+- [DONE] Research reusable public GitHub tools/assets with compatible licenses
+- [DONE] Record license/provenance
+- [DONE] Record character design intent in CHARACTER_DESIGN.md
 
 ### 1B. First character pack
-- [PLANNED] Player hero model
-- [PLANNED] Ground enemy model
-- [PLANNED] Flying enemy model
-- [PLANNED] Neutral NPC base model
-- [PLANNED] Materials/palette
-- [PLANNED] GLB exports
-- [PLANNED] Source-generation/model files
-- [PLANNED] Automated mesh/file validation
+- [CANDIDATE] Player hero: Aster
+- [CANDIDATE] Ground enemy: Moss Mite
+- [CANDIDATE] Flying enemy: Prismwing
+- [CANDIDATE] Neutral NPC base: Waykeeper
+- [CANDIDATE] Materials/palette via vertex colors
+- [CANDIDATE] GLB exports generated locally
+- [DONE] Deterministic source-generation file committed
+- [DONE] GitHub build workflow committed
+- [CANDIDATE] Automated mesh/file validation passed locally
+- [PENDING] Confirm generated GLBs are committed by GitHub workflow
 - [PLANNED] User visual approval
 
 ### 1C. Character rigging and animation
@@ -112,10 +115,10 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [PLANNED] Story/dialogue
 
 ## Current next milestone
-Character Pack v0.1.0 CANDIDATE:
-- 4 original low-poly characters
-- GLB files
-- source-generation/model notes
-- provenance/license manifest
-- validation report
-- user-facing preview method where practical
+Character Pack v0.1.0 visual review:
+- inspect Aster
+- inspect Moss Mite
+- inspect Prismwing
+- inspect Waykeeper
+- approve or request targeted changes
+- only after approval begin rigging/animation
