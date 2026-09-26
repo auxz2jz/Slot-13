@@ -6,9 +6,9 @@
 - Platform target: Android
 - Project status: IN PROGRESS
 - Current phase: Phase 1 - Original 3D characters
-- Current version/build: Character Pack v0.1.0 VERIFIED visual baseline; v0.2.0 high-detail CANDIDATE
+- Current version/build: Character Pack v0.1.0 VERIFIED visual baseline; v0.3.0 semi-realistic articulated CANDIDATE
 - Last user-verified working version: Character Pack v0.1.0 visual designs approved by user on 2026-09-25
-- Latest unverified candidate: Character Pack v0.2.0 high-detail local package, SHA-256 15f1c0d220b6886bd6b3f902b44d3c4a91637bb71fe7f107e507aa55995c6eec
+- Latest unverified candidate: Character Pack v0.3.0 articulated local package; neutral + action-pose GLBs for all four characters
 
 ## Canonical startup instructions
 Before substantial work:
@@ -57,9 +57,12 @@ Current Character Pack v0.1.0 candidates:
 6. [DONE] Commit deterministic generator and GitHub build workflow.
 7. [PENDING] Confirm GitHub-generated binary asset commit; the workflow run has not yet been observable through the available GitHub connector.
 8. [DONE] User visually approved all four v0.1.0 character designs on 2026-09-25.
-9. [IN PROGRESS] Preserve v0.1.0 exactly and create higher-detail v0.2.0 meshes with larger triangle budgets.
-10. [PLANNED] Add LOD tiers so higher-detail close models can fall back to lightweight versions at distance.
-11. [PLANNED] After high-detail visual approval, begin rigging/animation.
+9. [DONE] Preserve v0.1.0 and create higher-detail v0.2.0 meshes.
+10. [DONE] User rejected the v0.2.0 styling direction as too cartoonish / nutcracker-like and requested a more modern semi-realistic look.
+11. [DONE] Generate v0.3.0 real articulated GLBs with named joint hierarchies and matching action-pose proof files.
+12. [IN PROGRESS] Visually review v0.3.0 and continue fidelity improvements toward the selected B / semi-realistic modern game reference.
+13. [PLANNED] Upgrade humanoid fidelity using a realistic CC0 MakeHuman/MPFB-derived workflow where practical, while preserving original character identity.
+14. [PLANNED] After visual approval, add animation clips and LOD packaging.
 
 ## Character candidate results
 ### hero_aster.glb
@@ -128,13 +131,15 @@ Current Character Pack v0.1.0 candidates:
 - Local Character Pack v0.1.0 package and preview.
 
 ## Exact next action
-Preserve Character Pack v0.1.0 as the first user-verified visual baseline. Build Character Pack v0.2.0 as a separate higher-detail candidate with approximately:
-- Hero/NPC LOD0: 4,000–8,000 triangles each
-- Ground/flying enemy LOD0: 2,000–5,000 triangles each
-- LOD1: roughly half LOD0
-- LOD2: retain or derive from the verified v0.1.0 low-poly meshes
+Have the user inspect the actual Character Pack v0.3.0 GLBs. Treat them as an ARTICULATION CANDIDATE, not a final visual match. Continue toward the selected semi-realistic modern-game B reference, prioritizing:
+- less toy-like / less cartoonish anatomy
+- realistic humanoid proportions and clothing
+- preserved named articulation hierarchy
+- improved creature anatomy
+- MakeHuman/MPFB-derived realistic CC0 humanoid workflow where practical
+- later animation clips and LOD tiers
 
-Do not overwrite v0.1.0. After v0.2.0 visual approval, proceed to rigging and animation.
+Do not overwrite the verified v0.1.0 baseline.
 
 ## Checkpoint history
 ### Checkpoint 0 - Project initialization
@@ -178,3 +183,18 @@ Do not overwrite v0.1.0. After v0.2.0 visual approval, proceed to rigging and an
 - Local preview contact sheet generated.
 - User visual approval: PENDING.
 - Exact next action: user inspects v0.2.0 preview/GLBs and either approves or requests targeted changes.
+
+
+### Checkpoint 4 - Character Pack v0.3.0 articulated candidate
+- Status: CANDIDATE / USER VISUAL REVIEW PENDING
+- Direction: B / semi-realistic modern game style.
+- Actual 3D GLBs created, not concept images.
+- Rig type: named hierarchical articulated glTF nodes.
+- Each character has a neutral GLB plus a second action-pose GLB created by rotating the same hierarchy.
+- Aster neutral: 10,332 triangles; 76 glTF nodes; required neck/shoulder/elbow/wrist/hip/knee/ankle nodes validated; reload PASS.
+- Waykeeper neutral: 11,280 triangles; 75 glTF nodes; required humanoid joints validated; reload PASS.
+- Moss Mite neutral: 6,832 triangles; 59 glTF nodes; articulated head, mandibles, antennae and six leg chains; reload PASS.
+- Prismwing neutral: 5,328 triangles; 70 glTF nodes; articulated head, segmented abdomen, wings, antennae and six leg chains; reload PASS.
+- Limitation: current v0.3.0 is hierarchical articulation using overlapping organic body/clothing parts, not yet a single deforming skinned humanoid mesh.
+- Public GitHub research identified MakeHuman/MPFB as a promising realistic-rigged path; MakeHuman output characters can be CC0.
+- Exact next action: user inspects v0.3.0 actual GLBs; continue visual-fidelity refinement toward B while preserving articulation.
