@@ -35,8 +35,8 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [CANDIDATE] Automated mesh/file validation passed locally
 - [PENDING] Confirm generated GLBs are committed by GitHub workflow
 - [DONE] User visual approval for v0.1.0
-- [IN PROGRESS] Build higher-detail v0.2.0 character meshes
-- [PLANNED] Add LOD0/LOD1/LOD2 character variants
+- [CANDIDATE] Build higher-detail v0.2.0 character meshes
+- [PARTIAL] LOD0 high-detail meshes generated; LOD1/LOD2 packaging still planned
 - [PLANNED] Add higher-resolution texture/material pass after mesh-detail approval
 
 ### 1C. Character rigging and animation
@@ -125,5 +125,5 @@ Character Pack v0.2.0 high-detail candidate:
 - Enemy LOD0 target: 2k–5k triangles
 - create LOD1 and retain/derive LOD2 lightweight versions
 - validate GLBs and triangle counts
-- obtain user visual approval
+- [PENDING] obtain user visual approval
 - then begin rigging/animation
