@@ -6,9 +6,9 @@
 - Platform target: Android
 - Project status: IN PROGRESS
 - Current phase: Phase 1 - Original 3D characters
-- Current version/build: Character Pack v0.1.0 VERIFIED visual baseline; v0.2.0 high-detail upgrade IN PROGRESS
+- Current version/build: Character Pack v0.1.0 VERIFIED visual baseline; v0.2.0 high-detail CANDIDATE
 - Last user-verified working version: Character Pack v0.1.0 visual designs approved by user on 2026-09-25
-- Latest unverified candidate: High-detail Character Pack v0.2.0 planned from the preserved v0.1.0 visual baseline
+- Latest unverified candidate: Character Pack v0.2.0 high-detail local package, SHA-256 15f1c0d220b6886bd6b3f902b44d3c4a91637bb71fe7f107e507aa55995c6eec
 
 ## Canonical startup instructions
 Before substantial work:
@@ -165,3 +165,16 @@ Do not overwrite v0.1.0. After v0.2.0 visual approval, proceed to rigging and an
 - v0.1.0 must remain preserved and must not be overwritten.
 - New requested direction: increase character mesh resolution / triangle counts while preserving the approved designs.
 - Planned v0.2.0 strategy: higher-detail LOD0 meshes plus lower LOD tiers for Android performance.
+
+
+### Checkpoint 3 - Character Pack v0.2.0 high-detail candidate
+- Status: CANDIDATE / USER VISUAL REVIEW PENDING
+- v0.1.0 remains the VERIFIED visual baseline and was not overwritten.
+- Package SHA-256: 15f1c0d220b6886bd6b3f902b44d3c4a91637bb71fe7f107e507aa55995c6eec
+- Aster HD: 8,748 triangles; GLB reload PASS.
+- Moss Mite HD: 8,144 triangles; GLB reload PASS.
+- Prismwing HD: 5,672 triangles; GLB reload PASS.
+- Waykeeper HD: 7,640 triangles; GLB reload PASS.
+- Local preview contact sheet generated.
+- User visual approval: PENDING.
+- Exact next action: user inspects v0.2.0 preview/GLBs and either approves or requests targeted changes.
