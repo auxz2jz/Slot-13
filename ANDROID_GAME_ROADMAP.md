@@ -24,17 +24,20 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [DONE] Record character design intent in CHARACTER_DESIGN.md
 
 ### 1B. First character pack
-- [CANDIDATE] Player hero: Aster
-- [CANDIDATE] Ground enemy: Moss Mite
-- [CANDIDATE] Flying enemy: Prismwing
-- [CANDIDATE] Neutral NPC base: Waykeeper
+- [VERIFIED] Player hero visual design: Aster v0.1.0
+- [VERIFIED] Ground enemy visual design: Moss Mite v0.1.0
+- [VERIFIED] Flying enemy visual design: Prismwing v0.1.0
+- [VERIFIED] Neutral NPC visual design: Waykeeper v0.1.0
 - [CANDIDATE] Materials/palette via vertex colors
 - [CANDIDATE] GLB exports generated locally
 - [DONE] Deterministic source-generation file committed
 - [DONE] GitHub build workflow committed
 - [CANDIDATE] Automated mesh/file validation passed locally
 - [PENDING] Confirm generated GLBs are committed by GitHub workflow
-- [PLANNED] User visual approval
+- [DONE] User visual approval for v0.1.0
+- [IN PROGRESS] Build higher-detail v0.2.0 character meshes
+- [PLANNED] Add LOD0/LOD1/LOD2 character variants
+- [PLANNED] Add higher-resolution texture/material pass after mesh-detail approval
 
 ### 1C. Character rigging and animation
 - [PLANNED] Humanoid skeleton
@@ -115,10 +118,12 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [PLANNED] Story/dialogue
 
 ## Current next milestone
-Character Pack v0.1.0 visual review:
-- inspect Aster
-- inspect Moss Mite
-- inspect Prismwing
-- inspect Waykeeper
-- approve or request targeted changes
-- only after approval begin rigging/animation
+Character Pack v0.2.0 high-detail candidate:
+- preserve verified v0.1.0 unchanged
+- raise triangle budgets while keeping the approved silhouettes
+- Hero/NPC LOD0 target: 4k–8k triangles
+- Enemy LOD0 target: 2k–5k triangles
+- create LOD1 and retain/derive LOD2 lightweight versions
+- validate GLBs and triangle counts
+- obtain user visual approval
+- then begin rigging/animation
