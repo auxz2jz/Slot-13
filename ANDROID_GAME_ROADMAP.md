@@ -35,12 +35,19 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [CANDIDATE] Automated mesh/file validation passed locally
 - [PENDING] Confirm generated GLBs are committed by GitHub workflow
 - [DONE] User visual approval for v0.1.0
-- [CANDIDATE] Build higher-detail v0.2.0 character meshes
-- [PARTIAL] LOD0 high-detail meshes generated; LOD1/LOD2 packaging still planned
-- [PLANNED] Add higher-resolution texture/material pass after mesh-detail approval
+- [DONE] Build higher-detail v0.2.0 character meshes
+- [SUPERSEDED] v0.2.0 visual style: user requested less cartoonish / less nutcracker-like designs
+- [CANDIDATE] v0.3.0 semi-realistic articulated GLBs generated with neutral + action-pose proof files
+- [IN PROGRESS] Improve humanoid fidelity toward selected B / semi-realistic modern-game target
+- [PLANNED] Evaluate MakeHuman/MPFB CC0 output workflow for realistic rigged humanoid base
+- [PLANNED] LOD1/LOD2 packaging
+- [PLANNED] Higher-resolution texture/material pass
 
 ### 1C. Character rigging and animation
-- [PLANNED] Humanoid skeleton
+- [CANDIDATE] Hierarchical articulated humanoid joint rig in v0.3.0
+- [CANDIDATE] Articulated creature joint rigs in v0.3.0
+- [PLANNED] Deforming skinned humanoid mesh / weight painting pass
+- [PLANNED] Humanoid skeleton refinement
 - [PLANNED] Idle
 - [PLANNED] Walk/run
 - [PLANNED] Jump/fall/land
@@ -118,12 +125,10 @@ PLANNED | IN PROGRESS | CANDIDATE | PARTIAL | VERIFIED | FAILED | BLOCKED | SUPE
 - [PLANNED] Story/dialogue
 
 ## Current next milestone
-Character Pack v0.2.0 high-detail candidate:
-- preserve verified v0.1.0 unchanged
-- raise triangle budgets while keeping the approved silhouettes
-- Hero/NPC LOD0 target: 4k–8k triangles
-- Enemy LOD0 target: 2k–5k triangles
-- create LOD1 and retain/derive LOD2 lightweight versions
-- validate GLBs and triangle counts
-- [PENDING] obtain user visual approval
-- then begin rigging/animation
+Character Pack v0.3.0 articulated visual review:
+- inspect actual neutral/action GLBs for all four characters
+- keep v0.1.0 verified baseline preserved
+- retain the v0.3.0 named joint hierarchy
+- refine toward the B semi-realistic modern-game reference
+- replace primitive-looking humanoid forms with a more realistic CC0 base workflow where practical
+- only after visual approval add animation clips and LOD packaging
