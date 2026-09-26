@@ -6,9 +6,9 @@
 - Platform target: Android
 - Project status: IN PROGRESS
 - Current phase: Phase 1 - Original 3D characters
-- Current version/build: Character Pack v0.1.0 CANDIDATE
-- Last user-verified working version: NONE
-- Latest unverified candidate: Character Pack v0.1.0 local package, SHA-256 0f82a84b87f05f1b2e4061265c87809596739b6530c2184e746244852e539788
+- Current version/build: Character Pack v0.1.0 VERIFIED visual baseline; v0.2.0 high-detail upgrade IN PROGRESS
+- Last user-verified working version: Character Pack v0.1.0 visual designs approved by user on 2026-09-25
+- Latest unverified candidate: High-detail Character Pack v0.2.0 planned from the preserved v0.1.0 visual baseline
 
 ## Canonical startup instructions
 Before substantial work:
@@ -56,8 +56,10 @@ Current Character Pack v0.1.0 candidates:
 5. [DONE] Validate local GLB parsing and geometry budgets.
 6. [DONE] Commit deterministic generator and GitHub build workflow.
 7. [PENDING] Confirm GitHub-generated binary asset commit; the workflow run has not yet been observable through the available GitHub connector.
-8. [PENDING] User visually reviews/approves the character designs.
-9. [PLANNED] Refine models if requested, then begin rigging/animation.
+8. [DONE] User visually approved all four v0.1.0 character designs on 2026-09-25.
+9. [IN PROGRESS] Preserve v0.1.0 exactly and create higher-detail v0.2.0 meshes with larger triangle budgets.
+10. [PLANNED] Add LOD tiers so higher-detail close models can fall back to lightweight versions at distance.
+11. [PLANNED] After high-detail visual approval, begin rigging/animation.
 
 ## Character candidate results
 ### hero_aster.glb
@@ -89,7 +91,6 @@ Current Character Pack v0.1.0 candidates:
 - SHA-256: 488f3966b288526d8c6f15b3973ab34c5ac13a88e1f70705b9df2dfda5b2bfd1
 
 ## Known bugs/limitations
-- No user-verified baseline exists yet.
 - Character Pack v0.1.0 is static/unrigged and contains no animations.
 - Models use vertex colors and no UV texture maps in this candidate.
 - Engine version is not pinned yet.
@@ -113,7 +114,7 @@ Current Character Pack v0.1.0 candidates:
 - Four local GLB exports generated successfully.
 - All four GLBs reloaded successfully with trimesh.
 - Visual contact-sheet sanity check completed.
-- User visual verification: UNTESTED.
+- User visual verification: PASS — user stated they like the characters on 2026-09-25.
 
 ## Diagnostic findings
 - No mesh-load failures in the local validation pass.
@@ -127,7 +128,13 @@ Current Character Pack v0.1.0 candidates:
 - Local Character Pack v0.1.0 package and preview.
 
 ## Exact next action
-Have the user review Character Pack v0.1.0 visually. If the designs are approved, preserve that approval as the first visual asset baseline and proceed to Phase 1C rigging/animation. If changes are requested, modify only the affected character(s) and create v0.1.1 CANDIDATE.
+Preserve Character Pack v0.1.0 as the first user-verified visual baseline. Build Character Pack v0.2.0 as a separate higher-detail candidate with approximately:
+- Hero/NPC LOD0: 4,000–8,000 triangles each
+- Ground/flying enemy LOD0: 2,000–5,000 triangles each
+- LOD1: roughly half LOD0
+- LOD2: retain or derive from the verified v0.1.0 low-poly meshes
+
+Do not overwrite v0.1.0. After v0.2.0 visual approval, proceed to rigging and animation.
 
 ## Checkpoint history
 ### Checkpoint 0 - Project initialization
@@ -148,3 +155,13 @@ Have the user review Character Pack v0.1.0 visually. If the designs are approved
 - ASSET_PROVENANCE.md and CHARACTER_DESIGN.md committed.
 - GitHub-generated binary asset commit: NOT YET CONFIRMED.
 - User visual verification: PENDING.
+
+
+### Checkpoint 2 - v0.1.0 visual approval / v0.2.0 detail upgrade
+- Date: 2026-09-25
+- v0.1.0 status: VERIFIED VISUAL BASELINE
+- User explicitly stated they like the four character designs.
+- Exact v0.1.0 package SHA-256 remains: 0f82a84b87f05f1b2e4061265c87809596739b6530c2184e746244852e539788
+- v0.1.0 must remain preserved and must not be overwritten.
+- New requested direction: increase character mesh resolution / triangle counts while preserving the approved designs.
+- Planned v0.2.0 strategy: higher-detail LOD0 meshes plus lower LOD tiers for Android performance.
